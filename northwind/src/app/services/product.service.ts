@@ -7,6 +7,7 @@ import { Product } from '../models/product';
 
 
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -19,9 +20,7 @@ export class ProductService {
     return this.httpClient.get<ListResponseModel<Product>>(newPath);
   }
 
-  getProductsByCategory(
-    categoryId: number
-  ): Observable<ListResponseModel<Product>> {
+  getProductsByCategory(categoryId:number): Observable<ListResponseModel<Product>> {
     let newPath=this.apiUrl+"products/getbycategory?categoryId="+categoryId
     return this.httpClient.get<ListResponseModel<Product>>(newPath);
   }

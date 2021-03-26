@@ -26,7 +26,7 @@ export class CartService {
 
   removeCart(product:Product){
     let item:CartItem = CartItems.find(c=>c.product.productId===product.productId);
-    CartItems.splice(CartItems.indexOf(item),1)
+    CartItems.splice(CartItems.indexOf(item),1)// indexi neresiyse oradan itibaren 1 tane sil demek
   }
 
   list():CartItem[]{
