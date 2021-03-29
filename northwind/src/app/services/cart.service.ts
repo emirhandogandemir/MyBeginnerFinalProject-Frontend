@@ -12,7 +12,7 @@ export class CartService {
 
 
   addToCart(product:Product){
-    let item = CartItems.find(c=>c.product.productId===product.productId);
+    let item = CartItems.find(c=>c.product.productId===product.productId);// sepette var mı yok mu onun kontrolünü sağlıyoruz
 
     if(item){
     item.quantity+=1;
